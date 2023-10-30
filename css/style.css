@@ -1,6 +1,14 @@
 /* All rules for Space Tourism */
 /* last rule wins // most specific rule wins */
 
+/* Custom Properties */
+:root {
+    --med-blue: #2B315E;
+    --dark-blue: #101439;
+    --gold: #FFBC61;
+}
+
+
 /* NORMALIZING RULES */
 * {
     box-sizing: border-box;
@@ -20,7 +28,7 @@ img {
 
 
 body {
-    background: var(--Blue---Med, #2A315F);
+    background: var(--med-blue);
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
@@ -41,6 +49,13 @@ header {
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     grid-gap: 50px;
+    transform: rotate(30deg)
+}
+.scooter {
+    transition: 1s}
+
+.scooter:hover {
+    transform: rotate(30deg)
 }
 
 .gold-bkg {
@@ -109,10 +124,12 @@ header {
 .primary-nav ul a.active {
     font-weight: 700;
 }
+
 model-viewer {
     width: 100%;
     height: 100vh;
 }
+
 /* typography */
 h3 {
     color: var(--Med-Blue, #2B315E);
@@ -132,10 +149,11 @@ h3 {
     border-radius: 10px;
     display: inline-block;
     transition: .5s;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
 }
 
 .button-gold {
-    background: #FFB859;
+    background: var(--gold);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
